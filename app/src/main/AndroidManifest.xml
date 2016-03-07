@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.poziomlabs.progress.dodukaan" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <permission
+        android:name="com.poziomlabs.progress.dodukaan.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission
+        android:name="com.poziomlabs.progress.dodukaan.permission.C2D_MESSAGE" />
+
+    <!-- Google MAP API key -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/dd_image"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.poziomlabs.progress.dodukaan.MainActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.poziomlabs.progress.dodukaan.READERACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.poziomlabs.progress.dodukaan.CardViewActivity"
+            android:label="@string/title_activity_card_view"
+            android:parentActivityName="com.poziomlabs.progress.dodukaan.RecyclerViewActivity" >
+        </activity>
+        <activity
+            android:name="com.poziomlabs.progress.dodukaan.RecyclerViewActivity"
+            android:label="Schedule" >
+            <intent-filter>
+                <action android:name="com.poziomlabs.progress.dodukaan.RECYCLERVIEWACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+
+
+                <data
+                    android:host="do-dukaan.appspot.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.poziomlabs.progress.dodukaan.MyIntentService"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name="com.poziomlabs.progress.dodukaan.Splash"
+            style="@style/NoActionBarTheme"
+            android:label="@string/title_activity_splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.poziomlabs.progress.dodukaan.NearComplex"
+            android:label="@string/title_activity_near_complex" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCPhnWV_nXKjqoionqDQ1zBdBtwWlwrG5U" />
+
+        <activity
+            android:name="com.poziomlabs.progress.dodukaan.ListComplex"
+            android:label="@string/title_activity_list_complex" >
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.poziomlabs.progress.dodukaan" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

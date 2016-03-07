@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginRight="0dp"
+    android:layout_marginLeft="0dp"
+    android:layout_height="match_parent" tools:context="com.poziomlabs.progress.dodukaan.ShopNear">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/success"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:layout_gravity="center_horizontal" />
+
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/success"
+        android:text="@string/rs"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:textSize="25dp"
+        />
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/orders"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:textSize="20dp"
+        android:text="Order Successful"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/timing"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:textSize="15dp"
+        android:text="Order Successful"/>
+
+</LinearLayout>

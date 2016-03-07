@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/ofinder"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topbar">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="@drawable/toprect"
+            android:id="@+id/toprect"
+            android:visibility="gone"
+            android:layout_height="28dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount Rs. "
+                android:id="@+id/amount_static"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/dynamic"
+                android:layout_toStartOf="@+id/dynamic"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:id="@+id/dynamic"
+                android:layout_alignTop="@+id/amount_static"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="19dp"
+                android:layout_marginEnd="19dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please wait..."
+            android:id="@+id/details"/>
+
+    </FrameLayout>
+
+
+
+    <ListView
+        android:layout_below="@+id/topbar"
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/btnDownload"
+        android:background="@drawable/toprect"
+        android:onClick="buttonClickHandler"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:visibility="gone"
+        android:text="PREORDER (Amount- Rs.0)"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>

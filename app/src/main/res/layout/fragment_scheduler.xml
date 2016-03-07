@@ -1,0 +1,126 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrlvu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false">
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linlaymain"
+    android:background="@drawable/cream"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.poziomlabs.progress.dodukaan.Scheduler">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+       android:src="@drawable/dd_image"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:layout_gravity="center_horizontal" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dname"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center_horizontal|center"
+
+        >
+        <EditText
+            android:id="@+id/EdtTxtTravInf"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center_horizontal|center"
+        >
+
+        <EditText
+            android:id="@+id/EdtTxtDscrptn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:inputType="phone"
+            android:hint="Phone (10 digit)"
+   />
+
+        <!--android:scrollbars="veritical"-->
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/demail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center_horizontal|center"
+        >
+
+        <EditText
+            android:id="@+id/EdtTxtAccomo"
+            android:layout_width="250dp"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:hint="Email"
+            android:maxLines="1"
+  />
+
+        <!--android:scrollbars="veritical"-->
+
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dapartment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center_horizontal|center"     >
+
+        <!--android:scrollbars="veritical"-->
+        <EditText
+            android:id="@+id/EdtTxtDrsCd"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:hint="Apartment Name"
+            />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/save"
+        android:layout_marginTop="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="registration"
+        android:text="REGISTER" />
+
+</LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+</ScrollView>
